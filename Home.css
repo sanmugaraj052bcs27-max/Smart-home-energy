@@ -1,0 +1,268 @@
+/* MAIN PAGE BACKGROUND */
+.home-page {
+  background: #f8fafc; /* light background */
+  color: #0f172a; /* dark text */
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+/* NAVBAR */
+.home-page .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 15px 60px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.home-page .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+.home-page .logo-icon {
+  margin-right: 8px;
+  color: #0ea5e9;
+}
+
+
+/* NAV LINKS */
+.home-page .nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.home-page .nav-links li {
+  color: #334155;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.home-page .nav-links li:hover {
+  color: #0ea5e9;
+}
+
+
+/* LOGIN BUTTON */
+.home-page .login-btn {
+  padding: 8px 18px;
+  background: #0ea5e9;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.home-page .login-btn:hover {
+  background: #0284c7;
+}
+
+
+/* HERO SECTION */
+.home-page .hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 120px 80px;
+  background: linear-gradient(to right, #f8fafc, #e0f2fe);
+}
+
+
+/* HERO TEXT */
+.home-page .hero-left h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.home-page .hero-left p {
+  color: #475569;
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+
+/* BUTTON */
+.home-page .start-btn {
+  margin-top: 20px;
+  padding: 14px 30px;
+  background: #0ea5e9;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.home-page .start-btn:hover {
+  background: #0284c7;
+}
+
+
+/* HERO IMAGE */
+.home-page .hero-right {
+  margin-left: 100px;
+}
+
+.home-page .phone {
+  height: 520px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+
+/* SECTION */
+.home-page .section {
+  padding: 100px 80px;
+  text-align: center;
+}
+
+.home-page .section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.home-page .section p {
+  color: #475569;
+}
+
+
+/* ABOUT BOX */
+.home-page .about-box {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+
+/* SERVICES */
+.home-page .service-card-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home-page .service-card {
+  background: white;
+  padding: 25px;
+  width: 260px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.home-page .service-card:hover {
+  transform: translateY(-8px);
+}
+
+.home-page .service-card h3 {
+  color: #0f172a;
+}
+
+.home-page .service-card p {
+  color: #475569;
+}
+
+.home-page .service-icon {
+  font-size: 32px;
+  color: #0ea5e9;
+}
+
+
+/* FAQ */
+.home-page .faq-box {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+
+/* TESTIMONIALS */
+.home-page .testimonial-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home-page .testimonial-card {
+  background: white;
+  padding: 25px;
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+
+/* CONTACT */
+/* CONTACT */
+.home-page .contact-container {
+  display: flex;
+  justify-content: center;
+}
+
+.home-page .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 600px;
+}
+
+/* Name and Email in one row */
+.home-page .contact-form input {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 100%;
+}
+
+/* Message full width */
+.home-page .contact-form textarea {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 100%;
+  height: 120px;
+  resize: none;
+}
+
+/* Button full width */
+.home-page .send-btn {
+  background: #0ea5e9;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+/* FOOTER */
+.home-page .footer {
+  background: white;
+  color: #64748b;
+  padding: 25px;
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
+}
