@@ -77,24 +77,23 @@ function Dashboard() {
         data: energyHistory,
         borderColor: "#00f0ff",
         backgroundColor: "#00f0ff",
-        tension: 0.3 // Optional: adds a slight curve to the line
+        tension: 0.3
       }
     ]
   };
 
-  // ✅ ADDED: Configuration to control the size of the graph
   const chartOptions = {
     responsive: true,
-    maintainAspectRatio: false, 
+    maintainAspectRatio: false,
     plugins: {
-      legend: {
-        position: 'top',
-      }
+      legend: { position: "top" }
     }
   };
 
   return (
     <div className="dashboard">
+
+      {/* HEADER (UNCHANGED) */}
       <div className="header">
         <h2>Smart Energy Dashboard ⚡</h2>
         <h2>Welcome {username}</h2>
@@ -104,7 +103,7 @@ function Dashboard() {
             src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
             className="profile-pic"
             onClick={() => setOpen(!open)}
-            alt="User Profile" // ✅ ADDED: Fixes the alt prop warning
+            alt="profile"
           />
 
           {open && (
@@ -117,33 +116,51 @@ function Dashboard() {
         </div>
       </div>
 
-      <div className="stats">
+      {/* 🔥 NEW TOP CARDS */}
+      <div className="top-cards">
         <div className="card">
-          <h4>Total Energy</h4>
-          <p>{totalEnergy} kWh</p>
+          <h4>Energy Efficiency</h4>
+          <div className="circle">{savedEnergy}%</div>
+          <p>Better than 80% homes</p>
         </div>
+
         <div className="card">
-          <h4>Active Devices</h4>
-          <p>{activeDevices}</p>
+          <h4>Peak Usage</h4>
+          <p>7PM - 10PM ⚠️</p>
+          <span className="alert">Active</span>
         </div>
+
         <div className="card">
           <h4>Monthly Bill</h4>
           <p>₹{bill}</p>
         </div>
+
         <div className="card">
-          <h4>Saved Energy</h4>
-          <p>{savedEnergy}%</p>
+          <h4>Active Devices</h4>
+          <p>{activeDevices}</p>
         </div>
       </div>
 
+      {/* GRAPH */}
       <div className="graph-section">
         <h3>Energy Consumption</h3>
-        {/* ✅ WRAPPED: In a container to control height/width via CSS */}
-        <div className="chart-container" style={{ height: '300px', width: '100%' }}>
+        <div className="chart-container">
           <Line data={chartData} options={chartOptions} />
         </div>
       </div>
 
+      {/* 🤖 AI SECTION */}
+      <h3>AI Energy Intelligence</h3>
+      <div className="ai-grid">
+        <div className="card">🔋 Battery Optimization</div>
+        <div className="card">⚡ Smart Load Balancing</div>
+        <div className="card">🌞 Solar Usage</div>
+        <div className="card">💡 Lighting Optimization</div>
+        <div className="card">📊 Behaviour Insight</div>
+        <div className="card">🌍 Sustainability</div>
+      </div>
+
+      {/* DEVICES (UNCHANGED LOGIC) */}
       <h3>Quick Device Control</h3>
       <div className="device-grid">
         {devices.map((device) => (
@@ -159,6 +176,7 @@ function Dashboard() {
           </div>
         ))}
       </div>
+
     </div>
   );
 }
